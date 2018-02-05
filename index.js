@@ -33,6 +33,6 @@ app.get('/vid', (req,res)=>{
 	}
 });
 
-app.listen(process.env.PORT|5000,()=>{
-	console.log("Listening to port",process.env.PORT|5000);
+app.listen(process.env.PORT||5000,()=>{
+	console.log("Listening to port",process.env.PORT||5000);
 });
