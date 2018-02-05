@@ -21,8 +21,8 @@ app.get('/', (req,res)=>{
 app.get('/vid', (req,res)=>{
 	try{
 		let url = req.query.url;
-		if(ytdl.validateURL(url)){
-			res.setHeader("content-type","video/*");
+		if(ytdl.validateURL(url,{ filter: (format) => format.container === 'mp4' })){
+			res.setHeader("content-type","video/mp4");
 			ytdl(url)
 				.pipe(res);
 		}else{
