@@ -1,0 +1,28 @@
+{
+  "name": "ytdl_express",
+  "version": "0.0.1",
+  "description": "REST API for YouTube download",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/parthpower/ytdl_express.git"
+  },
+  "keywords": [
+    "expressjs",
+    "ytdl"
+  ],
+  "author": "Parth Parikh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parthpower/ytdl_express/issues"
+  },
+  "homepage": "https://github.com/parthpower/ytdl_express#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "ytdl-core": "^0.20.0"
+  }
+}
