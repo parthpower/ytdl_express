@@ -1,6 +1,6 @@
 {
   "name": "ytdl_express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "REST API for YouTube download",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/parthpower/ytdl_express#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "ytdl-core": "^0.20.0"
+    "youtube-scrape": "^1.0.2",
+    "ytdl-core": "^0.20.1"
   }
 }

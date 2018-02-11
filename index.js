@@ -1,5 +1,6 @@
 const express = require('express');
 const ytdl = require('ytdl-core');
+var yts = require('youtube-scrape');
 
 const app = express();
 
@@ -32,6 +33,20 @@ app.get('/vid', (req,res)=>{
 		res.send('Oops!');
 	}
 });
+
+
+app.get('/search',(req,resp)=>{
+	try{
+		let query = req.query.q;
+		yts(decodeURI(query)).then((data)=>{
+			resp.send(data);
+		}, (error)=>{
+			resp.send('Oops!');
+		})
+	}catch(err){
+		res.send('Oops!');
+	}
+})
 
 app.listen(process.env.PORT||5000,()=>{
 	console.log("Listening to port",process.env.PORT||5000);
