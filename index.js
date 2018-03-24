@@ -54,18 +54,33 @@ app.get('/iamfeelinglucky',(req,res)=>{
 	}catch(err){
 		var query = 'yelling goat sound';
 	}
+	try{
+		var vid = req.query.vid;
+	}catch(err){
+		var vid = '0';
+	}
 	yts(query).then((r)=>{
 		try{
 			var youtube_url = r.results[0].video.url;
 		}catch(err){
 			var youtube_url = "https://www.youtube.com/watch?v=q6EoRBvdVPQ";
 		}
-		if(ytdl.validateURL(youtube_url)){
-			res.setHeader("content-type","audio/aac");
-			ytdl(youtube_url, {quality: "highestaudio", filter: "audioonly"})
-				.pipe(res);
+		if(vid==='1'){
+			if(ytdl.validateURL(youtube_url,{ filter: (format) => format.container === 'mp4' })){
+				res.setHeader("content-type","video/mp4");
+				ytdl(youtube_url)
+					.pipe(res);
+			}else{
+				res.send("Oops!");
+			}
 		}else{
-			res.send("Oops!");
+			if(ytdl.validateURL(youtube_url)){
+				res.setHeader("content-type","audio/aac");
+				ytdl(youtube_url, {quality: "highestaudio", filter: "audioonly"})
+					.pipe(res);
+			}else{
+				res.send("Oops!");
+			}
 		}
 
 	}).catch(err=>{
@@ -76,3 +91,5 @@ app.get('/iamfeelinglucky',(req,res)=>{
 app.listen(process.env.PORT||5000,()=>{
 	console.log("Listening to port",process.env.PORT||5000);
 });
+
+module.export = app;

@@ -10,7 +10,7 @@
 
 `<endpoint>/search?q=<search_query>` to get search result using the [parthpower/youtube-scrape](https://github.com/parthpower/youtube-scrape) scraper.
 
-`<endpoint>/iamfeelinglucky?q=<search_query>` to get audio file from first search result.
+`<endpoint>/iamfeelinglucky?q=<search_query>[&vid=1]` to get audio/video file from first search result.
 
 # DISCLAIMER
 
