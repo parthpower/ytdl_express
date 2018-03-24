@@ -52,7 +52,7 @@ app.get('/iamfeelinglucky',(req,res)=>{
 	try{
 		var query = req.query.q;
 	}catch(err){
-		var query = 'linkin park numb';
+		var query = 'yelling goat sound';
 	}
 	yts(query).then((r)=>{
 		try{

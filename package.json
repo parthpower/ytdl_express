@@ -1,10 +1,9 @@
 {
   "name": "ytdl_express",
   "version": "0.0.2",
-  "description": "REST API for YouTube download",
+  "description": "REST API for YT download",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "repository": {
