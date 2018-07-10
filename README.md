@@ -1,5 +1,14 @@
 # YT Download REST API
 
+# Installation (Docker)
+
+```
+git clone https://github.com/parthpower/ytdl_express
+cd ytdl_express
+docker build -t <username>/ytdl_express .
+docker run -p 8080:8080 -d <username>/ytdl_express
+```
+
 # Usage
 
 ## GET Request
