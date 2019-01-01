@@ -1,5 +1,7 @@
 # YT Download REST API
 
+[![Build Status](https://travis-ci.com/parthpower/ytdl_express.svg?branch=master)](https://travis-ci.com/parthpower/ytdl_express)
+
 ## Installation (Docker)
 
 ```
