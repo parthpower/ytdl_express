@@ -8,5 +8,9 @@ before_install:
   - docker run -p 127.0.0.1:8080:8080 -d parthpower/ytdl_express
   - docker ps -a
 
+install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push parthpower/ytdl_express
+
 script:
-  - curl -O http://127.0.0.1:8080/iamfeelinglucky?q=pewdiepirewind&vid=1
+  - echo "Done"
