@@ -1,6 +1,6 @@
 # YT Download REST API
 
-# Installation (Docker)
+## Installation (Docker)
 
 ```
 git clone https://github.com/parthpower/ytdl_express
@@ -9,9 +9,9 @@ docker build -t <username>/ytdl_express .
 docker run -p 8080:8080 -d <username>/ytdl_express
 ```
 
-# Usage
+## Usage
 
-## GET Request
+### GET Request
 
 `<endpoint>/?url=<youtube_video_url>` to download audio only (aac format)
 
@@ -21,8 +21,8 @@ docker run -p 8080:8080 -d <username>/ytdl_express
 
 `<endpoint>/iamfeelinglucky?q=<search_query>[&vid=1]` to get audio/video file from first search result.
 
-# DISCLAIMER
+## DISCLAIMER
 
 THIS PROJECT IS FOR EDUCATIONAL PURPOSE ONLY.
 
-# [LICENSE](/LICENSE)
+## [LICENSE](/LICENSE)
