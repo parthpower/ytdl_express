@@ -1,0 +1,12 @@
+language: ruby
+
+services:
+- docker
+
+before_install:
+  - docker build parthpower/ytdl_express .
+  - docker run -p 127.0.0.1:8080:8080 -d parthpower/ytdl_express
+  - docker ps -a
+
+script:
+  - curl -O http://127.0.0.1:8080/iamfeelinglucky?q=pewdiepirewind&vid=1
