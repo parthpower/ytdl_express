@@ -4,7 +4,7 @@ services:
 - docker
 
 before_install:
-  - docker build parthpower/ytdl_express .
+  - docker build -t parthpower/ytdl_express .
   - docker run -p 127.0.0.1:8080:8080 -d parthpower/ytdl_express
   - docker ps -a
 
