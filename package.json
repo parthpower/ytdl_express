@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/parthpower/ytdl_express#readme",
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "node-fetch": "^2.0.0",
